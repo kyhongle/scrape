@@ -1,10 +1,10 @@
 var mongoose = require("mongoose");
-var schema = mongoose.Schema;
-var noteSchema = new schema({
-  articleId: { type: schema.Types.ObjectId, ref: "Article" },
+var Schema = mongoose.Schema;
+var NoteSchema = new Schema({
+  articleId: { type: Schema.Types.ObjectId, ref: "Article" },
   date: { type: Date, default: Date.now },
-  text: { type: String, required: true }
+  text: { type: String, required: "please input something" }
 });
 
-var note = mongoose.model("Note", noteSchema);
-module.exports = note;
+var Note = mongoose.model("Note", NoteSchema);
+module.exports = Note;

@@ -1,9 +1,9 @@
 var mongoose = require("mongoose");
-var schema = mongoose.Schema;
-var articleSchema = new schema({
+var Schema = mongoose.Schema;
+var ArticleSchema = new Schema({
   title: { type: String, required: true, unique: true },
   link: { type: String, required: true }
 });
 
-var article = mongoose.model("Article", articleSchema);
-module.exports = article;
+var Article = mongoose.model("Article", ArticleSchema);
+module.exports = Article;
